@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 반응선택자 */
+        /* 1. 대상:hover 
+            대상에 마우스를 올렸을 때   */
+
+        h1:hover{
+            background-color: pink;
+            color : blue;
+            
+        }
+        /* 2. 대상:active 
+            대상을 클릭했을 때  */
+        h1:active{
+            color : brown;
+        }
+        /* 조합/반응선택자는 태그선택자 뿐만 아니라 다양한 선택자에 적용가능 */
+        #cafe:active{
+            color : green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> 좋아하는 카페음료 </h1>
+    <h2 id="cafe"> 스타벅스 </h2>
+    <p> 자몽허니 블랙티 </p>
+</body>
+
+</html>

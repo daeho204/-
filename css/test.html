@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      div div{
+        color : blue;
+       }
+       div #menu{
+        color: red;
+       }
+       div div p{
+        color : green !important
+       }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <div>
+            <p id ='menu'>zzz</p>
+        </div>
+    </div>
+    <h1 id="id"> web master !!</h1>
+    <p class="ptitle"> web이해</p>
+    <p class="ptitle"> 홈페이지</p>
+    <ul>
+        <li class="websub">html</li>
+
+        <li class="websub">css</li>
+        <li class="websub">js</li>
+    </ul>
+
+    <script>
+        let q1 = document.getElementById('id').innerText;
+        console.log(q1);
+        let q2 = document.getElementsByClassName('ptitle')[1].innerText;
+        console.log(q2);
+        for( let i =0; i<document.getElementsByTagName('li').length; i++){
+            let q3 = document.getElementsByTagName('li')[i].innerText;
+            console.log(q3);
+        }
+    </script>
+</body>
+</html>

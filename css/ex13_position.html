@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parents>div {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            border: 1px solid blue;
+            /* opacity: 0.5; */
+           
+
+        }
+        #static{
+            position: static;
+            /* static(기본값): 위치속성 비활성화 - 고정됨 */
+        }
+        #relative{
+            position: relative;
+            top : -30px;
+            left : 10px;
+            /* relative : 처음 생성위치를 기반으로 top, bottom, left, right로 위치조정
+               기존위치 생각 안날시 : top:0 left:0으로 확인 */
+            
+            /* z-index 는 겹쳐있을때 어떤 항복을 위에놓을지 설정가능
+                static인 항목에는 사용 불가 */
+            z-index : 0;
+        }
+        #absolute{
+            position: absolute;
+            top : 0px;
+            /* absolute : 위치속성 활성화
+            부모가 static이 아니어야 한다
+            부모요소가 없다면 body태그를 기준으로 생성 */
+        }
+        #fixed{
+            position: fixed;
+            top  : 0;
+            /* fixed : 화면에 고정됨
+            최상위 태그인 body를 기준으로 화면에 고정됨
+            스크롤해도 고정  */
+        }
+
+        #one{
+            height: 100px;
+            width:  100px;
+            background-color: red;
+        }
+        #two{
+            height: 100px;
+            width:  100px;
+            background-color: green;
+            position: relative;
+            left : 100px;
+
+        }
+        #three{
+            height: 100px;
+            width:  100px;
+            background-color: blue;
+            position: relative;
+            left : 200px;
+
+        }
+        #four{
+            height: 100px;
+            width:  100px;
+            background-color: yellow;
+            position: relative;
+            left : 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parents">parents
+        <div id="static">static</div>
+        <div id="relative">relative</div>
+        <div id="absolute">absolute</div>
+        <div id="fixed">fixed</div>
+        
+    </div>
+
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+</body>
+
+</html>

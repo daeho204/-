@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flex : 레이아웃 배치 전용 기능
+        - 이동/배치 하고싶은 요소 : item
+        - item들을 담아둘 요소 : container
+        - display : flex 상태에서만 가능 */
+
+        /* Container 속성
+        1. flex설정 : display : flex;
+        2. 배치방향설정
+            - flex-direction : row(기본값)
+                - 메인축 : 가로
+                - 서브축 : 세로
+            - flex-direction : column
+                - 메인축 : 세로
+                - 서브축 : 가로
+        3. 메인축 기준으로 정렬
+            - justify-content : center 
+        4. 서브축 기준으로 정렬
+            - align-items : center 
+        5. 줄넘김 처리
+            - flex-wrap: wrap*/
+        #container{
+            height: 1000px;
+            width: 1000px;
+            background-color: aqua;
+            display : flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap:wrap;
+            /* 기본값은 nowrap */
+        }
+        /* item 속성
+        1. 크기설정
+        - flex-basis */
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border : 1px solid black;
+            flex-basis: 30%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    
+</body>
+</html>

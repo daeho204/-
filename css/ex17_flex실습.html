@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'seolleimcool-SemiBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/seolleimcool-SemiBold.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+
+        .container {
+            /* background-color: bisque; */
+            height: 100px;
+            display: flex;
+        }
+
+        .container>div {
+            /* border : 1px solid black; */
+        }
+
+        .container>.box1 {
+            flex-basis: 15%;
+            font-size: 45px;
+
+
+
+
+        }
+
+        .box1>h1 {
+            font-family: 'seolleimcool-SemiBold';
+            color: rgb(97, 97, 224);
+            margin-top: -10px;
+        }
+
+        .container>.box2 {
+            font-family: 'seolleimcool-SemiBold';
+            font-size: 40px;
+            flex-basis: 70%;
+            display: flex;
+            /* 부모의 display가 flex인 상태에서
+            자식의 display를 flex로 설정해주면 
+            자식도 item 속성에서 container가 된다
+            container 안의 container 생성 */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box2>a {
+            font-family: 'seolleimcool-SemiBold';
+            color: skyblue;
+
+            margin: 10%;
+            text-decoration: none;
+
+        }
+
+        .box3>a {
+            font-family: 'seolleimcool-SemiBold';
+            color: white;
+            margin: 10%;
+            text-decoration: none;
+            border: 3px solid rgb(137, 137, 230);
+            border-radius: 25%;
+            padding: 3px;
+            background-color: skyblue;
+            width: 80px;
+            height: 25px;
+            margin-right: 10px;
+
+        }
+
+        .container>.box3 {
+            flex-basis: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: top;
+        }
+        a:hover{
+            background-color: skyblue;
+            color : antiquewhite;
+            padding: 4px;
+        }
+        a{
+            padding:4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            <h1>SMHRD</h1>
+        </div>
+        <div class="box2">
+            <a href="#"> 메뉴</a>
+            <a href="#"> 베스트</a>
+            <a href="#"> 뉴스</a>
+        </div>
+        <div class="box3">
+            <a href="#"> 로그인</a>
+            <a href="#"> 회원가입</a>
+
+        </div>
+    </div>
+</body>
+
+</html>
