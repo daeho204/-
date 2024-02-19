@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1px solid black" align = "center" width = "80px", height = "80px">
+        <tr>
+            <td> 1 </td>
+            <td> 2 </td>
+        </tr>
+        <tr>
+            <td> 3 </td>
+            <td> 4 </td>
+        </tr>
+        <tr>
+            <td> 5 </td>
+            <td> 6 </td>
+        </tr>
+        
+    </table>
+    
+        
+
+     
+     <!-- 
+        1) 테이블 공간 생성 선언 : <table> </table> -->
+    <table border="1px solid black" >
+        <!-- 2) 테이블의 한 줄 생성 : <tr></tr> (tablerow) -->
+        <tr> 
+            <!-- 3) 표의 헤더 작성 : <th></th> -> tableheader tag 는 자동으로 가운데 정렬/ bold 처리  -->
+            <th colspan="3" align="center" bgcolor = 'grey'> 미리네 카페 메뉴판</th>
+            <!-- colspan : 셀 가로병합 -->
+        </tr>
+        <tr>
+            <!-- 3.1 테이블 데이터 : <td></td> -->
+            <td> 아메리카노 </td>
+            <td> 3000 </td>
+            <td rowspan="3">핫/아이스</td>
+            <!-- rowspan : 셀 세로병합 -->
+        </tr>
+        <tr>
+            <td>카페라떼</td>
+            <td rowspan="2">3500</td>
+        </tr>
+        <tr>
+            <td>카라멜마끼아토</td>
+        </tr>
+        <tr>
+            <td >아이스티</td>
+            <td colspan="2">4000 (ice only)</td>
+        </tr>
+
+    </table>
+    
+
+
+    
+</body>
+</html>

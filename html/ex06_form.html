@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        <form></form> tag
+        - 입력폼을 만들 때 사용
+        - 사용자에게 정보를 받아주는 태그
+        - 필수속성 : method (전달방식), action(전달위치)
+     -->
+    <form action="./ex03_이미지태그.html">
+        <!-- 
+          <form action="#"></form>
+        '#'은 전달위치가 미정일 때 사용 
+    -->
+        <span> ID</span>
+        <input type="text" name="id" value="" placeholder="고양이를 쳐봐" maxlength="15" autofocus>
+
+        <!-- 
+            type : input type
+            name 과 value 값은 백엔드로 넘겨서 사용
+            placeholder : 회색글씨로 미리보기
+            maxlength : 글자수 제한 
+            autofocus : 커서 시작위치로 지정
+        -->
+        <span>PW</span>
+        <input type="password" name="pw" placeholder="pw plz">
+        <!-- type = "password" 비밀번호 타입으로 나름의 암호화 -->
+
+        <span>강의장</span>
+        <input type="text" name="cl" value="B강의장" readonly>
+        <br>
+        <!-- input type : checkbox = 중복선택 가능 -->
+        <p>음료</p>
+        <input type="checkbox" value='americano' name='drink'> 아메리카노
+        <input type="checkbox" value='latte' name='drink'> 라떼
+        <input type="checkbox" value='iceteashot' name='drink'> 아샷추
+
+        <!-- input type : radio = 중복선택 불가능 
+            name을 지정해서 그룹을 형성해야 한다
+        -->
+        <p>성별</p>
+        <input type="radio" value='male' name='gender'> 남
+        <input type="radio" value='female' name='gender'> 여
+
+        <!-- <select></select> : 드롭다운 박스 생성 가능
+            <option></option> : select안에 값 생성 -->
+        <p>이메일</p>
+        <input type="text"> @
+        <select name="mail">
+            <option value="gmail">gmail.com</option>
+            <option value="naver">naver.com</option>
+        </select><br>
+        
+
+        <!-- 제출/초기화 버튼의 위치는 form태그 내부여야한다
+             제출/초기화되는 정보의 범위는 해당 form태그의 시작 ~ 끝
+             -->
+        <p></p>
+        <input type="submit" value = '회원가입완료'>
+        <input type="reset">
+
+        <input type="color" name="" id="">
+        <input type="tel" name="" id="">
+        <input type="range" name="" id=""><br>
+        <input type="file" name="" id="">
+        <input type="date" name="" id="">
+        <input type="image" src="" alt="">
+    
+
+    </form>
+
+
+
+</body>
+
+</html>
