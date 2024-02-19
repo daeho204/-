@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 함수: 특별한 목적의 작업수행을 위해서 독립적으로 설계된 블록
+        // 원하는 기능을 간편하게 사용하기 위함
+        // input(입력, 매개변수), output(출력, 반환데이터)를 고려해야함
+        // 함수선언방식 : 함수선언문, 함수표현식 화살표함수
+
+        // 1. 함수선언문
+        // funtion = 함수이름(){}
+        // - 정의 후 어디서든 호출이 가능하다 (선언보다 위쪽에서도 사용 가능)
+        // 함수호이스팅 : 함수 선언문이 자바스크립트 엔진(V8)에 의해서 먼저 실행되는 방식
+        //               원치 않는 실행결과가 나올 수 있기 때문에 함수표현식, 화살표 함수를 더 많이 사용!!
+
+
+        // 선언
+        function greet(){
+            console.log("안녕하세요! ");
+        }
+        // 호출
+        greet()
+
+        // 2. 함수표현식(ES6문법: 최신문법임)
+        // const 함수이름 = fuction{}
+        // -함수를 값으로 취급한다
+        // -다른 함수의 인자값으로 전달가능
+        // 자료형이 const인 이유는 함수는 바뀔 일이 없기때문
+
+        //선언
+        const greet2 = function(){
+            console.log('반가워요~');
+
+        } 
+        //호출
+        greet2();
+
+        // 3. 화살표 함수(ES6문법)
+        // const 함수이름 = (매개변수) => {}
+        // const greet3 = name => {}   :   매개변수가 한 개일 때는 소괄호 생략이 가능함!!
+        const greet3 = (name) => {
+            console.log(name + '님 처음뵙겠습니다!!!');
+        }
+
+        greet3("김대호");
+
+    </script>
+</body>
+</html>

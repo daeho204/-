@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /* 문제
+           이모지랑 숫자를 입력받은 후, 웹페이지에 피라미드 모양을 출력
+           함수 pyramid() 구현
+           pyramid(❤ , 3)
+           ❤
+           ❤❤
+           ❤❤❤
+        */
+
+        let emoji = prompt("이모지를 입력하세요: ");
+        let num = parseInt(prompt("몇 줄을 출력할지 입력하세요 : "));
+
+        //함수선언&로직구현
+        const pyramid = (emo, numb) => {
+            for (let i = 0; i < num; i++) {
+                for (let j = 0; j < i + 1; j++) {
+                    console.log(document.write(emo));
+                }
+                document.write('<br>');
+            }
+        }
+        pyramid(emoji, num);
+
+        const revpyramid = (emo, numb) => {
+            for (let i = 0; i < num; i++) {
+                for (let j = num; j > i + 1; j--) {
+                    console.log(document.write(emo));
+                }
+                document.write('<br>');
+            }
+        }
+        revpyramid(emoji,num);
+
+
+    </script>
+</body>
+
+</html>

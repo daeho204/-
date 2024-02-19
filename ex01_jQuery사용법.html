@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> 배고파 밥줘 </h1>
+    <h2> 얼른줘 배고프다니까 </h2>
+
+    <div id="div1">
+        <div id="div2"> "DIV2" </div>
+        <div id="div3"> "DIV3" </div>
+        <div id="div4"> "DIV4" </div>
+    </div>
+
+
+    <!-- jQuery Load -->
+    <!-- 1. 직접 다운로드 받아서 로드 -->
+    <script src = "./jquery-3.7.1.min.js"> </script>
+
+    <!-- 2. CDN(Content Delivery Network) 사용하여 로드 -->
+    <!-- integrity, crossorigin : 보안상 필요한 옵션(수정 X) -->        
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        // .html() , .text() : 요소 안의 content 를 가지고 올 때 사용하는 메소드
+        // .html() = innerHTML  / .text() = textContent 와 동일한 기능
+        // $('h1').html("햄버거 먹고싶다");
+        $("h1").text("햄버거 먹고싶다");
+
+        // 스타일 수정
+
+        // js => style.color = "red"
+        $("h1").css("color", "red");
+
+        // 다중스타일제어
+        // 1. 객체화
+        $("h1").css({
+            color : "blue",
+            fontSize : "40px",
+            fontFamily : "궁서체",
+            marginLeft : "100px"
+
+            /* 이렇게 써도 사용 가능함
+            color : "blue",
+            font-size : "40px",
+            font-family : "궁서체",
+            margin-left : "100px"*/
+
+        })
+
+        // 2. 메소드체인
+        //.css().html().css().text() 모두 연결하여 사용가능
+        $("h2").css("color", "orange").css("font-family", "굴림");
+
+        // 요소의 자식요소 가져오기
+        $("#div1").children("div");
+        console.log($("#div1").children());
+        //부모 가져오기
+        $("div2").parents("div");
+        // console.log($("#div2").parents("div"));
+        // console.log($("#div2").parents());
+        // children, parents ()비워놓으면 젤 아래나 젤 위로 부모/자식 찾으러 내려감
+
+        // 이전요소(형) 불러오기
+        console.log($("#div4").prevAll());
+        // 다음 요소(동생) 불러오기
+        console.log($("#div2").nextAll());
+
+        // 이벤트 등록하기
+        //.on()
+        $("h1").on("click", function(){
+            $("h1").css("color", "violet");
+        })
+
+        // 마우스 올리기
+        $("h1").on("mouseover", function(){
+            $(this).html("마우스올렸다").css("color", "green").css("font-family", "굴림");
+        })
+        // 마우스 때기
+        $("h1").on("mouseout", function(){
+            $(this).html("마우스땠다").css("color", "yellow");
+        })
+        // this사용하면 객체화 시킨 태그에 바로 접근 (python self, java this랑 같은원리)
+
+
+        // 태그에 class 추가/제거
+        // .addClass(), removeClass()
+        $("h1").addClass("user");
+        $("h1").removeClass("user");
+    </script>
+    
+    
+</body>
+</html>

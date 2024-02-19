@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" autofocus>
+    <button>출력</button>
+    <!-- <div>태그 안에서 띄어쓰기 할려면 &nbsp; 써주면 됨 -->
+    <div></div>
+    <script>
+        /*
+        실습
+        사용자가 넣은 내용을 웹페이지에 출력하기
+        input에 입력하고 출력버튼을 누르면 아래 div영역에 하나하나 추가되어야함
+
+        조건1. 사용자가 입력한 내용은 꼭 div태그안에 추가가 되어야함
+        조건2. 새로운 내용을 입력해도 기존에 div 내용은 유지되어야함
+        조건3. 새로운 내용은 div안에 일반텍스트가 아닌 <p>태그로 출력
+        */
+        // 심화
+        // 1. 사용자가 내용을 입력하면 input태그를 깔끔하게 비워주기!
+        // 2. html시간에 배웠던 것 중에 input태그에 포커싱 해주는거 있었는데 그것도 넣어보기!    
+
+        let btn = document.getElementsByTagName("button")[0];
+        let search = document.getElementsByTagName("input")[0];
+        let area = document.getElementsByTagName("div")[0];
+
+        btn.addEventListener('click', function () {
+            let saveVal = search.value;
+            console.log(saveVal);
+            area.innerHTML += `<p> ${saveVal} </p>`;
+            search.value = ''; //input 초기화
+            search.focus(); //입력 후 input창으로 포커스 맞추기
+
+        })
+        search.addEventListener("keydown", function (e) {
+            let saveVal = search.value;
+            console.log(saveVal);
+            if (e.keyCode == 13) {
+                area.innerHTML += `<p> ${saveVal} </p>`;
+                search.value = null; //input 초기화
+            }
+            console.log(e.keyCode);
+
+
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // keydown : 키보드의 특정 키를 누르고 있을 때 적용
+        let user = document.getElementsByTagName('body')[0];
+        user.addEventListener("keydown", function(e){
+            console.log(e.key);
+            console.log(e.keyCode);
+            if(e.keyCode == 32) alert("스페이스바 입력");
+           
+
+        })
+    </script>
+</body>
+</html>

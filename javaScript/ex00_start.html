@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // js연습
+        // body 바로위에 script tag를 생성하는게 일반적
+
+        // 출력문
+        // 1. document.write() : 문서(html)에 직접 작성할 때
+        document.write("<h1>document.write test</h1>")
+        document.write(20240202)
+
+        // 2. alert() : 알림 팝업창 실행시키는 출력문
+        // 최우선적으로 실행되는 logic
+        // alert("alert message")
+
+        // 3. console.log() : 콘솔창에 로그 남길 때 사용
+        // 데이터의 통신여부 확인 & 데이터의 구조를 파악할때 용이
+        // 확인은 f12 개발자도구의 console tap 에서 한다
+        console.log("Console message");
+        // console.info("information")
+        // console.warn("warning")
+        // console.error("error")
+
+        // 입력문
+        // 1. confirm("") : 사용자에게 확인/취소를 입력받는 입력문
+        // return type : boolean
+        // confirm("가입하시겠습니까?")
+        console.log(confirm("가입하시겠습니까?")); //콘솔창에서 리턴값 확인가능
+        // 2. promt("출력내용", "입력내용") : 사용자에게 직접 키보드 값을 입력받는 입력문
+        // return type : "" (String)
+        // prompt("이름을 입력해주세요")
+        console.log(prompt("이름을 입력해주세요"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> h1 태그 변경 전</h1>
+    <button>h1 변경</button>
+    <button id="ul">ul 추가</button>
+    <button id="a">a 추가</button>
+    
+    <div></div>
+    <script>
+        /*
+        클릭한 버튼에 따라서 다른 로직을 구현하는 프로그램 만들기
+        1. h1변경을 누르면 h1태그를 변경]2
+        2. ul추가를 누르면 div영역에 ul추가
+        3. a추가를 누르면 div영역에 a태그 추가
+
+        요소에 id/class는 원하는 대로 추가해서 사용
+        3개의 이벤트 리스너 필요
+        */
+       let h1 = document.querySelector("h1");
+       let div = document.querySelector("div");
+    //    let div = document.getElementsByTagName("div")[0];
+       let h1_btn = document.querySelector("button");
+       let ul_btn = document.getElementById("ul");
+       let a_btn = document.getElementsByTagName("button")[2];
+       //    TagName으로 가져올때는 [button, button, button] 으로 들고오기때문에 3번째 버튼을 들고옴
+       // let a_btn = document.getElementsByTagName("button");
+       // a_btn[2].addEventListener 이런식으로도 사용가능
+    
+
+
+       h1_btn.addEventListener("click", function(){
+        console.log(h1);
+        let change = prompt("변경할 내용 입력하세요");
+        console.log(typeof(change));
+        h1.innerHTML = change;
+
+       })
+       ul_btn.addEventListener("click", function(){
+        div.innerHTML += "<li> ul1 </li>";
+       })
+       a_btn.addEventListener("click", function(){
+        div.innerHTML += "<a href = \"https://www.naver.com \"> Naver </a><br>";
+       })
+
+    </script>
+</body>
+</html>

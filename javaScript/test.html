@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <div class="editable date" data-id="6">2021-09-23</div>
+    <div class="editable date" data-id="1">2011-08-11</div>
+
+<script>
+let editable = document.getElementsByClassName("editable");
+
+let i;
+for (i = 0; i < editable.length; i++) {
+  editable[i].style.display = "inline-block";
+  editable[i].style.cursor = "pointer";
+  editable[i].style.border = "1px dotted gray";
+  editable[i].addEventListener("dblclick", function (ev) {
+    let input = document.createElement("input");
+    input.type = "date";
+    input.value = ev.currentTarget.innerText;
+
+    // bind inner callenadr
+    input.addEventListener("keypress", function (ev) {
+      ev.currentTarget.removeEventListener("change", saveAction);
+      ev.currentTarget.removeEventListener("blur", saveAction);
+
+      ev.currentTarget.addEventListener("submit", function (ev) {
+        saveAction(ev);
+      });
+
+      if (ev.keyCode === 13) {
+        saveAction(ev);
+      }
+    });
+
+    input.addEventListener("blur", saveAction);
+
+    ev.currentTarget.replaceChild(input, ev.currentTarget.childNodes[0]);
+
+    input.focus();
+  });
+}
+
+function saveAction(ev) {
+  const element = ev.currentTarget;
+  console.log("saving... ", element.value);
+
+  let txt = document.createTextNode(element.value);
+  let id = element.parentElement.getAttribute("data-id");
+  console.log("id", id);
+
+  element.parentElement.replaceChild(txt, element.parentElement.childNodes[0]);
+}
+</script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        /*
+        변수 : 데이터를 담는 공간
+        변수 선언방법
+        Java : 자료형 변수이름 = 값; ex) int storage = 10;
+        JavaScript : 변수키워드 변수이름 = 값; ex) var storage = 10;
+
+        JS 변수의 특징
+        - 변수 키워드로 선언 (var)
+        - 만드는 순간 자료형이 결정된다
+
+        자료형 : String, boolean, number, undefined, null
+        - 위 5가지를 제외한 타입은 object(객체)이다 
+        */
+
+       // 1. String : 문자형태
+       // - '', "". ``(백틱)
+        var name = "김대호";
+        console.log('string', name);
+        console.log('타입: ', typeof(name));
+
+        // * 자료형을 구분하는 방법
+        // - typeof()
+        // - console창 색깔
+
+        // 2. number : 숫자
+        var num1 = 3;
+        var num2= 3.14;
+        console.log('num1은 ', num1, ' 타입은', typeof(num1))
+        console.log('num2는 ', num2, ' 타입은', typeof(num2))
+
+        // 3. boolean : 참/거짓
+        var check = false;
+        console.log('boolean type : ', check);
+        // null & undefined
+        // 공통점 : 값이 비어있다
+        // 차이점 : null = 비어있다
+        //         undefined = type 조차 정의되지 않았다
+        // 값이 비어있다는것을 비교하기 위해 사용
+        
+
+
+        // 변수 키워드
+        // 1. var : 재선언 & 재할당 가능
+        var user1 = "미리";
+        var user1 = "채린"; //재선언
+        user1 = "대호" //재할당
+
+        // 2. let : 재선언 불가능 & 재할당 가능
+        let user2 = "지호"; 
+        // let user2 = "호영"; //재선언
+        user2 = "유진"; //재할당
+
+        // 3. const : 재선언 불가 & 재할당 불가
+        // html객체저장, 클래스/함수 정의
+        const user3 = "민석";
+        // const user3 = "용재"; // 재선언 불가
+        user3 = "동현"; //재할당 불가
+
+
+    </script>    
+</body>
+</html>

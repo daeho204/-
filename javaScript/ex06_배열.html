@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //JavaScript의 배열 : 길이가 가변적이며 자료형의 제약이 없다.
+        //배열 생성 방법(배열을 무조건 먼저 생성해야함.)
+        let namelist = [];
+        // let namelist1 = new Array(1,2,3,4,5);
+        // console.log(namelist1);
+        namelist[0] = 1;
+        namelist[1] = 2;
+        namelist[2] = 'hello';
+        namelist[3] = true;
+        namelist[4] = ['a', 'b'];
+        namelist[5] = {'name' : 'justin'}; //객체형태의 데이터도 저장 가능
+        console.log(namelist);
+
+        // push()
+        // 배열의 마지막 위치에 데이터를 추가하는 함수
+        // 1개 이상 추가 가능
+        // 가변적인 매개변수
+
+        namelist.push(3);
+        namelist.push(4,5,6);
+
+        // 배열 수정 (인덱스)
+        namelist[0] = 7;
+        console.log(namelist);
+
+
+        // splice(시작인덱스, 삭제할 갯수)
+        // 배열 데이터 삭제
+        namelist.splice(0,2);
+        // includes()
+        // 배열 내 데이터 존재여부 확인
+        // return type : boolean
+        // 있으면 true, 없으면 false
+        console.log("hello 데이터 존재여부: ", namelist.includes('hello'));
+
+        // indexOf()
+        // 배열 내 찾고싶은 데이터 위치확인
+        // 데이터가 있으면 인덱스번호 반환 / 없다면 -1 반환
+        console.log("hello 데이터 존재여부: ", namelist.indexOf('hello'));
+
+
+        // slice()
+        // 특정 범위에 해당하는 데이터 잘라내기
+        // slice(시작인덱스, 끝 인덱스) -> 끝 인덱스 미포함
+        // slice된 데이터를 array 타입으로 반환 (기존배열에는 영향을 안끼침)
+        console.log(namelist.slice(0,5));
+
+        /*
+        배열의 맨 앞에 값 추가 : unshift()
+        배열의 맨 앞 값 제거 : shift()
+        배열의 맨 뒤에 값 추가 : push()
+        배열의 맨 뒤 값 제거 : pop()
+        배열의 중간에 값 추가, 삭제 : splice()
+        */
+    </script>
+</body>
+</html>

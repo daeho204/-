@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체의 종류
+        // 내장객체, 브라우저 객체, 사용자정의객체
+
+        // 1. 내장객체
+        // Number, String, Array, Date, Math...
+        // 기본형: 변수키워드 변수이름 = new 생성함수();
+
+        let today = new Date();
+        console.log(today)
+        let t_year = today.getFullYear();
+        let t_month = today.getMonth(); //범위 0 ~ 11, 0 = 1월
+        let t_date = today.getDate();
+        let t_day = today.getDay(); // 범위 0 ~ 6, 0 = 월요일
+        let t_hour = today.getHours();
+        let t_minute = today.getMinutes();
+        console.log(t_year, t_month);
+      
+        // 2-1. 브라우저객체 모델 : BOM(Browser Obejct Model)
+        // 브라우저가 제공하는 객체
+        // window() : 브라우저 객체 중 최상위 객체. 브라우저 창 관련 기능
+
+        // window.open("https://www.naver.com", "공지사항 안내",'width = 500', 'height=500');
+
+        // location: 브라우저의 주소 관련 정보 (현재 주소, 포트, 프로토콜 등...)
+        console.log("현재 브라우저의 주소 : ", location.href, location);
+
+        
+
+    </script>
+</body>
+</html>

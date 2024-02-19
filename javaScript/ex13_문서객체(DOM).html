@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- 
+        2-2. 문서객체모델 : DOM(Document Object Model)  
+        HTML태그를 자바스크립트 영역에서 사용할 수 있도록 객체형태로 변환시키는 작업
+        
+        getElementByID : HtmlElement 타입(단수) 반환 - id는 html문서에 한개씩만 존재
+        getElementsByClassName / Name / TagName: HtmlCollection (복수) 반환 - 복수형이라 [] 로 반환
+        -->
+    <p id="msg"> 문서객체 모델 공부하기</p>
+
+    <ul>
+        <li>1번li</li>
+        <li>2번li</li>
+        <li>3번li</li>
+    </ul>
+    <input type="text" id = 'user-input' autofocus>
+    <button id = 'btn'> 출력 </button>
+
+    <script>
+        // getElement
+        let msg = document.getElementById("msg");
+        console.log('p태그 ', msg);
+        // p태그의 텍스트값 접근 : textContent
+        console.log(msg.textContent);
+        // p태그의 내용을 변경
+        msg.textContent = '텍스트 내용 변경하기';
+        // p태그에 내용추가(기존유지)
+        msg.textContent += '추가';
+        // textContent는 html태그 사용 불가 -> innerHTML 사용해야함
+        msg.innerHTML += "<span>내용분리</span>";
+
+
+        // getElements
+        let item = document.getElementsByTagName("li")
+        console.log('li태그 ', item);
+        // 배열 형태로 리턴해주기때문에 단일데이터만 쓰고싶을때는 인덱스번호 활용
+        console.log('2번째li태그', item[1]);
+
+        // 이벤트(Event) : 사용자가 브라우저에 동작하는 행위 ex)클릭, 스크롤, 키보드...
+        // 이벤트핸들러(콜백함수/EventHandler) : 이벤트가 발생했을 때 처리할 함수
+        // 요소.addEventListener(이벤트종류, 이벤트핸들러)
+
+        // 사용자가 버튼을 클릭했을 때 alert로 "클릭이벤트 발생" 출력
+        // 1. 이벤트로 등록할 요소(Element)를 JS영역으로 가져오기 (getElement)
+        let btn = document.getElementById('btn');
+        // 2. 이벤트 등록 (addEventListener)
+        btn.addEventListener('click', function(){
+            alert("클릭");
+             // 버튼을 클릭 했을 때, console에 input에 담긴 값을 출력
+             // input, select, textarea 등 값들에 접근하려면 .value라는 데이터로 접근해야한다.
+            let userInput = document.getElementById('user-input');
+            console.log(userInput.value);
+        })
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+           
+            data: {
+                labels: ['Red', 'Blue', 'Yellow'],
+                datasets: [{
+                    label: 'bar_blue',
+                    data: [12, 19, 3],
+                    borderWidth: 3,
+                    barThickness: 25,
+                    hoverBackgroundColor: 'red',
+                    hoverBorderColor: 'yellow'
+                }, {
+                    label: 'bar_red',
+                    data: [8, 12, 11],
+                    borderWidth: 3,
+                    barThickness: 25,
+                    hoverBackgroundColor: 'blue',
+                    hoverBorderColor: 'brown'
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+            
+            
+        });
+    </script>
+
+
+</body>
+
+</html>

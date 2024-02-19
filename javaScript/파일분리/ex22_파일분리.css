@@ -1,0 +1,8 @@
+h1{
+    color:aquamarine;
+}
+button{
+    border: 2px solid red;
+    width: 100px;
+    border-radius: 25%;
+}

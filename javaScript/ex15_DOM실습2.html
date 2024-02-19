@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1">💖0</h1>
+    <button id="like"> 좋아요! 😊 </button>
+    <button id="dislike"> 싫어요! 😢 </button>
+    <script>
+        /*좋아요 싫어요 만들기
+        1. 좋아요 버튼 클릭 시, h1의 숫자 1증가
+        2. 싫어요 버튼 클릭 시, h1의 숫자 1 감소
+
+        h1 안의 값이 연산가능한지 확인해야함
+
+        조건1. 숫자는 음수일 수 없다
+        조건2. h1 꾸미기 : 이모티콘 넣기
+
+        좋아요 버튼 클릭 시 h1의 content에 +1 작업을 하고 연산된 값을 다시 대입
+        */
+        let like = document.getElementById('like');
+        // let like = document.getElementsByTagName('button')[0];
+        let dislike = document.getElementById('dislike');
+        let h1tag = document.getElementById('h1');
+        console.log(h1tag.textContent);
+        console.log(typeof (h1tag))
+        let counter = Number(h1tag.textContent);
+        like.addEventListener('click', function () {
+
+
+            console.log(typeof (counter))
+            counter = counter + 1;
+            console.log(counter);
+            h1tag.innerHTML = counter;
+            console.log(h1tag)
+
+
+        })
+        dislike.addEventListener('click', function () {
+
+
+            console.log(typeof (counter))
+            counter = counter - 1;
+            console.log(counter);
+            h1tag.innerHTML = counter;
+            console.log(h1tag);
+
+            if(counter < 0 ){
+            alert("0밑으로는 안됩니다.");
+        }
+
+
+        })
+        
+
+
+
+    </script>
+</body>
+
+</html>

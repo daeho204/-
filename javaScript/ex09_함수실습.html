@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 함수선언문
+        // function addNumber(num1, num2){
+        //     num1 = parseInt(prompt("첫번째 정수 입력: "))
+        //     num2 = parseInt(prompt("두번째 정수 입력: "))
+        //     console.log(`두 수의 합은 : ${num1 + num2}`)
+
+        // }
+        // addNumber();
+        
+        //함수표현식
+        // const addNumber1 = function(num1, num2){
+        //     num1 = parseInt(prompt("첫번째 정수 입력: "))
+        //     num2 = parseInt(prompt("두번째 정수 입력: "))
+        //     console.log(`두 수의 합은 : ${num1 + num2}`)
+        // }
+        // addNumber1();
+
+        //화살표함수
+        const addNumber2 = (num1, num2 ) => {
+            num1 = parseInt(prompt("첫번째 정수 입력: "))
+            num2 = parseInt(prompt("두번째 정수 입력: "))
+            console.log(`두 수의 합은 : ${num1 + num2}`)
+        }
+        addNumber2();
+    </script>
+</body>
+</html>

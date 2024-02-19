@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 동기방식 ex)
+        console.log(1);
+        console.log(2);
+        console.log(3);
+
+        // 비동기방식 ex)
+        console.log("첫번째");
+        setTimeout(() => {
+            console.log("두번째");
+        }, 3000);
+        console.log("세번째");
+
+        // Ajax
+        // 필요한 데이터만 웹서버에 요청하고 수신하는 비동기적 웹 개발법
+
+        $.ajax({
+            url: "서버경로",
+            type: "get(비암호)/post(암호)",
+            data : "서버에 보낼 데이터",
+            dataType : "응답받을 데이터 형식(html, xml, json...)",
+            sucess : function(data){
+                // data(매개변수) : 서버로부터 응답받은 데이터
+                // 요청이 성공적일때 함수실행(로직실행)
+            },
+            error: function(){
+                // 요청이 실패할경우 해당함수 실행
+            }
+        });
+    </script>
+</body>
+</html>
